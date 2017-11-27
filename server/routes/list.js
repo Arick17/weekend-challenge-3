@@ -12,7 +12,7 @@ router.get('/', function (req, res) {
         } else {
             //we connected to the DB!
             //Now we are going to GET things from the DB
-            client.query('SELECT * FROM list;', function (errorMakingTheQuery, result) {//Query is like from postico
+            client.query('SELECT * FROM list ORDER BY id;', function (errorMakingTheQuery, result) {//Query is like from postico
                 done();//calls to close the connection and put it back in the pg pool
                 if (errorMakingTheQuery) {
                     //Query failed. Did you test it in Postico?
