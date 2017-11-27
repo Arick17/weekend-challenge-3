@@ -1,7 +1,7 @@
 var pg = require('pg');
 
 var config = {//this object is going to tell pg what to do
-    database: 'shoe_store', //name of our database
+    database: 'to_do_list', //name of our database
     host: 'localhost',//where is your database, what computer?
     port: 5432,//port to connect to database, 5432 is default
     max: 10, //how many connections at one time OOOoooOOO
