@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
 
-var pool = require('../modules/pool');
+var pool = require('../modules/pool.js');
 
 router.get('/', function (req, res) {
     pool.connect(function (errorConnectingToDatabase, client, done) {//attempting connect to DB
@@ -54,7 +54,7 @@ router.get('/', function (req, res) {
     });//end connecting to DB
   });
 
-  router.delete('/:id', function (req, res) {
+  router.delete('/remove/:id', function (req, res) {
     var listItemIdToRemove = req.params.id;
     // Attempt to connect to database
     pool.connect(function (errorConnectingToDatabase, client, done) {

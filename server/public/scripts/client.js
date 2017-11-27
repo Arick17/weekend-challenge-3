@@ -21,13 +21,13 @@ $(document).ready(function () {
           notes: $('notesIn').val(),
         };
         // call saveKoala with the new obejct
-        addNewShoe( objectToSend );//------------------------------needs to change??
+        addNewList( objectToSend );//------------------------------needs to change??
       }); //end addButton on click
     }); // end doc ready
 
     //////------------------------------------------------------------------
 
-    function addNewShoe() {
+    function addNewList() {
         // get the values for the new shoes from the DOM using jQuery
         var newTask = $('#toDoIn').val();
         var newNotes = $('#notesIn').val();
